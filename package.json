@@ -1,0 +1,17 @@
+{
+  "name": "house-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:pod": "NODE_ENV=production nodemon server.js",
+    "debug": "node --inspect-brk server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

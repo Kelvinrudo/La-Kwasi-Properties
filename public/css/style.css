@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reusable */
+
+section {
+  padding: 80px 8%;
+}
+
+.btn {
+  display: incline-block;
+  background-color: #111;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+
+/* Header/ Navbar */
+
+.header {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../img/house1/oghouse1.webp");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.navbar {
+  height: 80px;
+  padding: 0.8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 650px;
+  padding: 0 8%;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* Houses section */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-title h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.section-title p {
+  font-size: 18px;
+  color: #777;
+}
+
+/* GRID */
+
+.house-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+
+.house-card {
+  background-color: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.house-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* IMAGE */
+
+.house-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.house-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.house-card:hover .house-image img {
+  transform: scale(1.08);
+}
+
+/* content */
+.house-content {
+  padding: 30px;
+}
+
+.house-content h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.house-location {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* FEATURES */
+
+.house-features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #eee;
+}
+
+.house-features span {
+  font-size: 15px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* DESCRIPTION */
+
+.house-description {
+  color: #666;
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+
+/* BUTTON */
+
+.house-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  background-color: #111;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.house-btn:hover {
+  background-color: #d4af37;
+  color: #111;
+}
+
+/* video section */
+.video-section {
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.video-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* map section */
+.map-section {
+  background-color: #fff;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.map-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Contacts section */
+
+.contact {
+  padding: 120px 10%;
+  background-color: #111;
+  color: white;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #ddd;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.contact a {
+  display: inline-block;
+  padding: 18px 40px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.contact a:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-4px);
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 25px;
+}
+
+/* ===================================== */
+/* MOBILE RESPONSIVENESS */
+/* ===================================== */
+
+@media (max-width: 768px) {
+  /* HERO */
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* NAVBAR */
+
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+    height: auto;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  /* HOUSE GRID */
+
+  .house-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* HOUSE IMAGE */
+
+  .house-image img {
+    height: 260px;
+  }
+
+  /* PROPERTY HERO */
+
+  .property-hero {
+    height: 60vh;
+  }
+
+  /* PROPERTY DETAILS */
+
+  .property-details h1 {
+    font-size: 38px;
+  }
+
+  .property-price {
+    font-size: 30px;
+  }
+
+  /* FEATURES */
+
+  .property-features {
+    flex-direction: column;
+  }
+
+  /* SLIDER */
+
+  .slide {
+    height: 300px;
+  }
+
+  /* BUTTONS */
+
+  .prev-btn,
+  .next-btn {
+    width: 45px;
+    height: 45px;
+
+    font-size: 22px;
+  }
+
+  .prev-btn {
+    left: 20px;
+  }
+
+  .next-btn {
+    right: 20px;
+  }
+
+  /* GALLERY */
+
+  .property-gallery {
+    padding: 70px 5%;
+  }
+
+  .property-contact h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .property-map {
+    padding: 60px 5%;
+  }
+
+  .map-wrapper iframe {
+    height: 320px;
+  }
+}
+
+/* ===================================== */
+/* MAP SECTION */
+/* ===================================== */
+
+.property-map {
+  padding: 120px 10%;
+  background-color: #f5f5f5;
+}
+
+.property-map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.property-map-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.property-map-text h2 {
+  font-size: 48px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.property-map-text p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* MAP CARD */
+
+.map-wrapper {
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: white;
+  padding: 15px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+/* MAP */
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 550px;
+  border: none;
+  border-radius: 16px;
+  display: block;
+}
